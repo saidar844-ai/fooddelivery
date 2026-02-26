@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВкусноДоставка - Быстрая доставка еды</title>
+    <meta name="description" content="Лучшая доставка еды в городе. Пицца, бургеры, суши, паста и десерты с быстрой доставкой на дом. Заказывайте онлайн!">
+    <meta name="keywords" content="доставка еды, пицца, бургеры, суши, заказ еды онлайн, быстрая доставка">
+    <meta name="author" content="ВкусноДоставка">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ВкусноДоставка - Быстрая доставка еды">
+    <meta property="og:description" content="Заказывайте свежую пиццу, бургеры, суши и многое другое с быстрой доставкой на дом.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vkusnodostavka.kz">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "ВкусноДоставка",
+      "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200",
+      "servesCuisine": ["Pizza", "Burgers", "Sushi", "Desserts", "Italian"],
+      "priceRange": "₸₸",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Алматы",
+        "addressCountry": "KZ"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🍔</span> Вкусно<span class="text-accent">Доставка</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#menu">Меню</a>
+                <a href="#about">О нас</a>
+                <a href="#delivery">Доставка</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cart-toggle-btn" aria-label="Открыть корзину">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Доставим <span class="text-accent">счастье</span> прямо к вашей двери</h1>
+                <p>Лучшие блюда из свежих ингредиентов. Заказывайте сейчас и наслаждайтесь превосходным вкусом без лишних хлопот.</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">Смотреть меню</a>
+                    <a href="#about" class="btn btn-secondary">Подробнее</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Аппетитный бургер с картофелем фри" loading="lazy" class="hero-image">
+                <div class="floating-badge badge-1">🚀 Быстрая доставка</div>
+                <div class="floating-badge badge-2">⭐️ 4.9 Рейтинг</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Categories -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Что предпочитаете?</h2>
+                    <p>Выберите категорию на любой вкус</p>
+                </div>
+                <div class="category-filters" id="category-filters">
+                    <!-- Categories will be injected here via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="menu" id="menu">
+            <div class="container">
+                <div class="menu-grid" id="menu-grid">
+                    <!-- Menu items will be injected here via JS -->
+                </div>
+                <div class="loader" id="menu-loader">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Info Section -->
+        <section class="info-section" id="delivery">
+            <div class="container info-grid">
+                <div class="info-card">
+                    <div class="info-icon">🛵</div>
+                    <h3>Быстрая доставка</h3>
+                    <p>Доставляем горячие блюда в течение 30-45 минут по всему городу.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🥗</div>
+                    <h3>Свежие ингредиенты</h3>
+                    <p>Мы используем только качественные и свежие продукты от проверенных поставщиков.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">💳</div>
+                    <h3>Удобная оплата</h3>
+                    <p>Оплачивайте заказы картой онлайн, наличными или через популярные приложения.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="about">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-icon">🍔</span> Вкусно<span class="text-accent">Доставка</span>
+                </a>
+                <p>Ваша любимая еда с доставкой на дом. Готовим с любовью, доставляем с радостью!</p>
+            </div>
+            <div class="footer-links">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="#menu">Меню</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#delivery">Доставка и оплата</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Контакты</h4>
+                <p>Телефон: +7 (700) 123-45-67</p>
+                <p>Email: info@vkusnodostavka.kz</p>
+                <p>Адрес: г. Алматы, ул. Абая 123</p>
+            </div>
+            <div class="footer-social">
+                <h4>Мы в соцсетях</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Telegram">TG</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ВкусноДоставка. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar / Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2>Ваша корзина</h2>
+            <button class="close-cart" id="close-cart-btn" aria-label="Закрыть корзину">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        
+        <div class="cart-items" id="cart-items-container">
+            <!-- Cart items will be injected here via JS -->
+            <div class="empty-cart-message" id="empty-cart-message">
+                <div class="empty-icon">🛒</div>
+                <p>Ваша корзина пуста</p>
+                <p class="empty-subtext">Добавьте что-нибудь вкусное из меню</p>
+            </div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <span>Итого:</span>
+                <span class="cart-total" id="cart-total-price">0 ₸</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" id="checkout-btn" disabled>Оформить заказ</button>
+        </div>
+    </aside>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
